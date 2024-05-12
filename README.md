@@ -734,7 +734,7 @@ heart_rate_seconds %>%
 
 
     
-![png](Bellabeat_Case_Study_files/Bellabeat_Case_Study_49_0.png)
+![png](output_49_0.png)
     
 
 
@@ -820,7 +820,7 @@ ggplot(data = calories_summary) +
 
 
     
-![png](Bellabeat_Case_Study_files/Bellabeat_Case_Study_55_1.png)
+![png](output_55_1.png)
     
 
 
@@ -880,7 +880,7 @@ ggplot(data = intensities_summary) +
 
 
     
-![png](Bellabeat_Case_Study_files/Bellabeat_Case_Study_60_1.png)
+![png](output_60_1.png)
     
 
 
@@ -958,7 +958,7 @@ barplot(TotalSteps ~ Id, data = daily_steps, las =2)
 
 
     
-![png](Bellabeat_Case_Study_files/Bellabeat_Case_Study_67_0.png)
+![png](output_67_0.png)
     
 
 
@@ -977,7 +977,7 @@ ggplot(data = daily_activity, aes(x=TotalSteps,y = Calories))+
 
 
     
-![png](Bellabeat_Case_Study_files/Bellabeat_Case_Study_69_1.png)
+![png](output_69_1.png)
     
 
 
@@ -1104,7 +1104,7 @@ barplot( AverageSleepMinutes~ Id, data = avg_sleep, las =2)
 
 
     
-![png](Bellabeat_Case_Study_files/Bellabeat_Case_Study_78_0.png)
+![png](output_78_0.png)
     
 
 
