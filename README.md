@@ -12,35 +12,16 @@ For the initial attempt, we attempted to load the dataset using MS Excel. Howeve
 
 
 ```R
+options(warn=0)
 library(tidyverse)
 library (hms)
 ```
-
-    ── [1mAttaching core tidyverse packages[22m ──────────────────────────────────────────────────────────────── tidyverse 2.0.0 ──
-    [32m✔[39m [34mdplyr    [39m 1.1.4     [32m✔[39m [34mreadr    [39m 2.1.5
-    [32m✔[39m [34mforcats  [39m 1.0.0     [32m✔[39m [34mstringr  [39m 1.5.1
-    [32m✔[39m [34mggplot2  [39m 3.5.1     [32m✔[39m [34mtibble   [39m 3.2.1
-    [32m✔[39m [34mlubridate[39m 1.9.3     [32m✔[39m [34mtidyr    [39m 1.3.1
-    [32m✔[39m [34mpurrr    [39m 1.0.2     
-    ── [1mConflicts[22m ────────────────────────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
-    [31m✖[39m [34mdplyr[39m::[32mfilter()[39m masks [34mstats[39m::filter()
-    [31m✖[39m [34mdplyr[39m::[32mlag()[39m    masks [34mstats[39m::lag()
-    [36mℹ[39m Use the conflicted package ([3m[34m<http://conflicted.r-lib.org/>[39m[23m) to force all conflicts to become errors
-    
-    Attaching package: 'hms'
-    
-    
-    The following object is masked from 'package:lubridate':
-    
-        hms
-    
-    
-    
 
 # Reading the CSV Files
 
 
 ```R
+options(warn=0)
 daily_activity <- read_csv("Fitabase Data 3.12.16-4.11.16/dailyActivity_merged.csv")
 ```
 
@@ -56,6 +37,7 @@ daily_activity <- read_csv("Fitabase Data 3.12.16-4.11.16/dailyActivity_merged.c
 
 
 ```R
+options(warn=0)
 heart_rate_seconds <- read_csv("Fitabase Data 3.12.16-4.11.16/heartrate_seconds_merged.csv")
 ```
 
@@ -71,6 +53,7 @@ heart_rate_seconds <- read_csv("Fitabase Data 3.12.16-4.11.16/heartrate_seconds_
 
 
 ```R
+options(warn=0)
 hourly_calories <- read_csv("Fitabase Data 3.12.16-4.11.16/hourlyCalories_merged.csv")
 ```
 
@@ -86,6 +69,7 @@ hourly_calories <- read_csv("Fitabase Data 3.12.16-4.11.16/hourlyCalories_merged
 
 
 ```R
+options(warn=0)
 hourly_intensities <- read_csv("Fitabase Data 3.12.16-4.11.16/hourlyIntensities_merged.csv")
 ```
 
@@ -101,6 +85,7 @@ hourly_intensities <- read_csv("Fitabase Data 3.12.16-4.11.16/hourlyIntensities_
 
 
 ```R
+options(warn=0)
 hourly_steps <- read_csv("Fitabase Data 3.12.16-4.11.16/hourlySteps_merged.csv")
 ```
 
@@ -116,6 +101,7 @@ hourly_steps <- read_csv("Fitabase Data 3.12.16-4.11.16/hourlySteps_merged.csv")
 
 
 ```R
+options(warn=0)
 sleep <- read_csv("Fitabase Data 3.12.16-4.11.16/minuteSleep_merged.csv")
 ```
 
@@ -131,6 +117,7 @@ sleep <- read_csv("Fitabase Data 3.12.16-4.11.16/minuteSleep_merged.csv")
 
 
 ```R
+options(warn=0)
 weight_info <- read_csv("Fitabase Data 3.12.16-4.11.16/weightLogInfo_merged.csv")
 ```
 
@@ -734,7 +721,7 @@ heart_rate_seconds %>%
 
 
     
-![png](output_49_0.png)
+![png](Bellabeat_Case_Study_files/Bellabeat_Case_Study_49_0.png)
     
 
 
@@ -820,7 +807,7 @@ ggplot(data = calories_summary) +
 
 
     
-![png](output_55_1.png)
+![png](Bellabeat_Case_Study_files/Bellabeat_Case_Study_55_1.png)
     
 
 
@@ -880,7 +867,7 @@ ggplot(data = intensities_summary) +
 
 
     
-![png](output_60_1.png)
+![png](Bellabeat_Case_Study_files/Bellabeat_Case_Study_60_1.png)
     
 
 
@@ -958,7 +945,7 @@ barplot(TotalSteps ~ Id, data = daily_steps, las =2)
 
 
     
-![png](output_67_0.png)
+![png](Bellabeat_Case_Study_files/Bellabeat_Case_Study_67_0.png)
     
 
 
@@ -977,7 +964,7 @@ ggplot(data = daily_activity, aes(x=TotalSteps,y = Calories))+
 
 
     
-![png](output_69_1.png)
+![png](Bellabeat_Case_Study_files/Bellabeat_Case_Study_69_1.png)
     
 
 
@@ -1104,7 +1091,7 @@ barplot( AverageSleepMinutes~ Id, data = avg_sleep, las =2)
 
 
     
-![png](output_78_0.png)
+![png](Bellabeat_Case_Study_files/Bellabeat_Case_Study_78_0.png)
     
 
 
