@@ -21,116 +21,44 @@ library (hms)
 
 
 ```R
-options(warn=0)
-daily_activity <- read_csv("Fitabase Data 3.12.16-4.11.16/dailyActivity_merged.csv")
+options(warn=0,message = FALSE)
+daily_activity <- read_csv("Fitabase Data 3.12.16-4.11.16/dailyActivity_merged.csv", show_col_types = FALSE)
 ```
 
-    [1mRows: [22m[34m457[39m [1mColumns: [22m[34m15[39m
-    [36m──[39m [1mColumn specification[22m [36m────────────────────────────────────────────────────────────────────────────────────────────────[39m
-    [1mDelimiter:[22m ","
-    [31mchr[39m  (1): ActivityDate
-    [32mdbl[39m (14): Id, TotalSteps, TotalDistance, TrackerDistance, LoggedActivitiesDi...
-    
-    [36mℹ[39m Use `spec()` to retrieve the full column specification for this data.
-    [36mℹ[39m Specify the column types or set `show_col_types = FALSE` to quiet this message.
-    
+
+```R
+heart_rate_seconds <- read_csv("Fitabase Data 3.12.16-4.11.16/heartrate_seconds_merged.csv",show_col_types = FALSE)
+```
 
 
 ```R
 options(warn=0)
-heart_rate_seconds <- read_csv("Fitabase Data 3.12.16-4.11.16/heartrate_seconds_merged.csv")
+hourly_calories <- read_csv("Fitabase Data 3.12.16-4.11.16/hourlyCalories_merged.csv",show_col_types = FALSE)
 ```
-
-    [1mRows: [22m[34m1154681[39m [1mColumns: [22m[34m3[39m
-    [36m──[39m [1mColumn specification[22m [36m────────────────────────────────────────────────────────────────────────────────────────────────[39m
-    [1mDelimiter:[22m ","
-    [31mchr[39m (1): Time
-    [32mdbl[39m (2): Id, Value
-    
-    [36mℹ[39m Use `spec()` to retrieve the full column specification for this data.
-    [36mℹ[39m Specify the column types or set `show_col_types = FALSE` to quiet this message.
-    
 
 
 ```R
 options(warn=0)
-hourly_calories <- read_csv("Fitabase Data 3.12.16-4.11.16/hourlyCalories_merged.csv")
+hourly_intensities <- read_csv("Fitabase Data 3.12.16-4.11.16/hourlyIntensities_merged.csv",show_col_types = FALSE)
 ```
-
-    [1mRows: [22m[34m24084[39m [1mColumns: [22m[34m3[39m
-    [36m──[39m [1mColumn specification[22m [36m────────────────────────────────────────────────────────────────────────────────────────────────[39m
-    [1mDelimiter:[22m ","
-    [31mchr[39m (1): ActivityHour
-    [32mdbl[39m (2): Id, Calories
-    
-    [36mℹ[39m Use `spec()` to retrieve the full column specification for this data.
-    [36mℹ[39m Specify the column types or set `show_col_types = FALSE` to quiet this message.
-    
 
 
 ```R
 options(warn=0)
-hourly_intensities <- read_csv("Fitabase Data 3.12.16-4.11.16/hourlyIntensities_merged.csv")
+hourly_steps <- read_csv("Fitabase Data 3.12.16-4.11.16/hourlySteps_merged.csv",show_col_types = FALSE)
 ```
-
-    [1mRows: [22m[34m24084[39m [1mColumns: [22m[34m4[39m
-    [36m──[39m [1mColumn specification[22m [36m────────────────────────────────────────────────────────────────────────────────────────────────[39m
-    [1mDelimiter:[22m ","
-    [31mchr[39m (1): ActivityHour
-    [32mdbl[39m (3): Id, TotalIntensity, AverageIntensity
-    
-    [36mℹ[39m Use `spec()` to retrieve the full column specification for this data.
-    [36mℹ[39m Specify the column types or set `show_col_types = FALSE` to quiet this message.
-    
 
 
 ```R
 options(warn=0)
-hourly_steps <- read_csv("Fitabase Data 3.12.16-4.11.16/hourlySteps_merged.csv")
+sleep <- read_csv("Fitabase Data 3.12.16-4.11.16/minuteSleep_merged.csv",show_col_types = FALSE)
 ```
-
-    [1mRows: [22m[34m24084[39m [1mColumns: [22m[34m3[39m
-    [36m──[39m [1mColumn specification[22m [36m────────────────────────────────────────────────────────────────────────────────────────────────[39m
-    [1mDelimiter:[22m ","
-    [31mchr[39m (1): ActivityHour
-    [32mdbl[39m (2): Id, StepTotal
-    
-    [36mℹ[39m Use `spec()` to retrieve the full column specification for this data.
-    [36mℹ[39m Specify the column types or set `show_col_types = FALSE` to quiet this message.
-    
 
 
 ```R
 options(warn=0)
-sleep <- read_csv("Fitabase Data 3.12.16-4.11.16/minuteSleep_merged.csv")
+weight_info <- read_csv("Fitabase Data 3.12.16-4.11.16/weightLogInfo_merged.csv",show_col_types = FALSE)
 ```
-
-    [1mRows: [22m[34m198559[39m [1mColumns: [22m[34m4[39m
-    [36m──[39m [1mColumn specification[22m [36m────────────────────────────────────────────────────────────────────────────────────────────────[39m
-    [1mDelimiter:[22m ","
-    [31mchr[39m (1): date
-    [32mdbl[39m (3): Id, value, logId
-    
-    [36mℹ[39m Use `spec()` to retrieve the full column specification for this data.
-    [36mℹ[39m Specify the column types or set `show_col_types = FALSE` to quiet this message.
-    
-
-
-```R
-options(warn=0)
-weight_info <- read_csv("Fitabase Data 3.12.16-4.11.16/weightLogInfo_merged.csv")
-```
-
-    [1mRows: [22m[34m33[39m [1mColumns: [22m[34m8[39m
-    [36m──[39m [1mColumn specification[22m [36m────────────────────────────────────────────────────────────────────────────────────────────────[39m
-    [1mDelimiter:[22m ","
-    [31mchr[39m (1): Date
-    [32mdbl[39m (6): Id, WeightKg, WeightPounds, Fat, BMI, LogId
-    [33mlgl[39m (1): IsManualReport
-    
-    [36mℹ[39m Use `spec()` to retrieve the full column specification for this data.
-    [36mℹ[39m Specify the column types or set `show_col_types = FALSE` to quiet this message.
-    
 
 # Perviewing the Imported Datasets
 
